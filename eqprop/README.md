@@ -1,3 +1,3 @@
 # Equilibrium Propagation
 
-The original code is from https://github.com/zeligism/eqprop. 
+The original code is from [here](https://github.com/zeligism/eqprop). 
