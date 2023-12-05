@@ -8,32 +8,6 @@ from sklearn.metrics import log_loss
 import warnings
 warnings.filterwarnings('ignore', category=UserWarning, module='sklearn')
 
-np.random.seed(1234)
-
-(X_train, y_train), (X_test, y_test) = mnist.load_data()
-
-X_train = X_train.astype('float32')
-X_test = X_test.astype('float32')
-
-X_train /= 255
-X_test /= 255
-
-# print('Input dimensions')
-# print(X_train.shape, X_test.shape)
-# print(y_train.shape, y_test.shape)
-
-X_train = X_train.reshape(60000, 28*28)
-X_test = X_test.reshape(10000, 28*28)
-
-# print('After reshaping:', X_train.shape, X_test.shape)
-# print('Sample of label:', y_train[0])
-
-nb_classes = 10
-y_train = to_categorical(y_train, nb_classes)
-y_test = to_categorical(y_test, nb_classes)
-
-# print('After conversion to categorical:', y_train[0])
-
 def forward_pass(W1, W2, b1, b2, x):
     '''This is the forward pass. It is equal for any
     training algorithm. It's just one hidden layer
@@ -198,6 +172,32 @@ def test(W1, W2, b1, b2, test_samples, test_targets):
     return test_error
 
 if __name__ == "__main__":
+    np.random.seed(1234)
+
+    (X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+    X_train = X_train.astype('float32')
+    X_test = X_test.astype('float32')
+
+    X_train /= 255
+    X_test /= 255
+
+    # print('Input dimensions')
+    # print(X_train.shape, X_test.shape)
+    # print(y_train.shape, y_test.shape)
+
+    X_train = X_train.reshape(60000, 28*28)
+    X_test = X_test.reshape(10000, 28*28)
+
+    # print('After reshaping:', X_train.shape, X_test.shape)
+    # print('Sample of label:', y_train[0])
+
+    nb_classes = 10
+    y_train = to_categorical(y_train, nb_classes)
+    y_test = to_categorical(y_test, nb_classes)
+
+    # print('After conversion to categorical:', y_train[0])
+
     W1, W2, b1, b2, te_bp, te_bp_std, bp_loss, bp_loss_std = train(X_train, y_train, n_epochs=50, lr=1e-4, batch_size=32, tol=1e-4)
     W1dfa, W2dfa, b1dfa, b2dfa, te_dfa, te_dfa_std, angles, da_loss, da_loss_std = dfa_train(X_train, y_train, n_epochs=50, lr=1e-4, batch_size=32, tol=1e-4)
 
@@ -207,9 +207,9 @@ if __name__ == "__main__":
     plt.figure()
     plt.errorbar(range(len(te_bp)), te_bp, yerr=te_bp_std, fmt='-o', ecolor='blue', capsize=5, label='BP training error')
     plt.errorbar(range(len(te_dfa)), te_dfa, yerr=te_dfa_std, fmt='-o', ecolor='red', capsize=5, label='DFA training error')
-    plt.title('Learning rate 1e-4')
+    plt.title('Training Error')
     plt.xlabel('Epochs')
-    plt.ylabel('Training error %')
+    plt.ylabel('Training error')
     plt.legend(loc='best')
     plt.savefig('training.png')
     # plt.show()
@@ -217,15 +217,22 @@ if __name__ == "__main__":
     plt.figure()
     plt.errorbar(range(len(bp_loss)), bp_loss, yerr=bp_loss_std, fmt='-o', ecolor='blue', capsize=5, label='BP training error')
     plt.errorbar(range(len(da_loss)), da_loss, yerr=da_loss_std, fmt='-o', ecolor='red', capsize=5, label='DFA training error')
-    plt.title('Learning rate 1e-4')
+    plt.title('Loss')
     plt.xlabel('Epochs')
     plt.ylabel('Loss %')
     plt.legend(loc='best')
     plt.savefig('error.png')
 
+    def moving_average(data, window_size):
+        """Compute the moving average of a 1D array with a specified window size."""
+        window = np.ones(window_size) / window_size
+        return np.convolve(data, window, 'valid')
+
     l, beta = zip(*angles)
+    mvavg = moving_average(beta, 50)
     plt.figure()
     plt.plot(range(len(beta)), beta, label='angle')
+    plt.plot(range(len(mvavg)), mvavg, label='angle movavg')
     plt.legend(loc='best')
     plt.xlabel('Counter')
     plt.ylabel('Angle')
