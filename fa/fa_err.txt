@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "train_fa_vs_bp_linear_model.py", line 82, in <module>
+    sig_fa_copy = torch.tensor(sigmoid_derivative(hidden_fa))
+  File "/mmfs1/gscratch/deepthought/zihan/ne2ebp/fa/angle.py", line 30, in sigmoid_derivative
+    x = x.detach().numpy()
+TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.

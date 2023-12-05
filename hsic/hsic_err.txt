@@ -1,0 +1,20 @@
+torch_hsic.py:18: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Iterable
+Traceback (most recent call last):
+  File "torch_hsic.py", line 230, in <module>
+    summary(model, input_size=(10, ))
+  File "/gscratch/deepthought/zihan/miniconda3/envs/playground/lib/python3.8/site-packages/torchsummary/torchsummary.py", line 72, in summary
+    model(*x)
+  File "/gscratch/deepthought/zihan/miniconda3/envs/playground/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/gscratch/deepthought/zihan/miniconda3/envs/playground/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "torch_hsic.py", line 75, in forward
+    x = self.relu_activation(self.layer1(data))
+  File "/gscratch/deepthought/zihan/miniconda3/envs/playground/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/gscratch/deepthought/zihan/miniconda3/envs/playground/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1568, in _call_impl
+    result = forward_call(*args, **kwargs)
+  File "/gscratch/deepthought/zihan/miniconda3/envs/playground/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)

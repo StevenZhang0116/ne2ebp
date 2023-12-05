@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "train.py", line 219, in <module>
+    main(args)
+  File "train.py", line 184, in main
+    test(testloader, eqpropnet, report_interval=args.report_interval)
+  File "train.py", line 131, in test
+    energy, cost = eqpropnet.eqprop(x, y, train=False)
+  File "/mmfs1/gscratch/deepthought/zihan/ne2ebp/eqprop/eqprop/eqprop.py", line 143, in eqprop
+    self.step(self.states)
+  File "/mmfs1/gscratch/deepthought/zihan/ne2ebp/eqprop/eqprop/eqprop.py", line 97, in step
+    energy = self.energy(states)
+  File "/mmfs1/gscratch/deepthought/zihan/ne2ebp/eqprop/eqprop/eqprop.py", line 46, in energy
+    states_energy = 0.5 * sum(torch.sum(s*s, dim=1) for s in states)
+RuntimeError: The size of tensor a (16) must match the size of tensor b (32) at non-singleton dimension 0

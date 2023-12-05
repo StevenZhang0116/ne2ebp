@@ -1,0 +1,200 @@
+Epoch 1
+
+Average Training Error Rate: 51.00% (30601/60000)
+
+Epoch 2
+
+Average Training Error Rate: 30.09% (18052/60000)
+
+Epoch 3
+
+Average Training Error Rate: 21.70% (13023/60000)
+
+Epoch 4
+
+Average Training Error Rate: 20.07% (12040/60000)
+
+Epoch 5
+
+Average Training Error Rate: 19.34% (11607/60000)
+
+Epoch 6
+
+Average Training Error Rate: 19.01% (11408/60000)
+
+Epoch 7
+
+Average Training Error Rate: 18.73% (11239/60000)
+
+Epoch 8
+
+Average Training Error Rate: 18.51% (11104/60000)
+
+Epoch 9
+
+Average Training Error Rate: 18.29% (10972/60000)
+
+Epoch 10
+
+Average Training Error Rate: 17.66% (10593/60000)
+
+Epoch 11
+
+Average Training Error Rate: 15.19% (9112/60000)
+
+Epoch 12
+
+Average Training Error Rate: 14.03% (8415/60000)
+
+Epoch 13
+
+Average Training Error Rate: 13.35% (8009/60000)
+
+Epoch 14
+
+Average Training Error Rate: 12.75% (7649/60000)
+
+Epoch 15
+
+Average Training Error Rate: 12.20% (7319/60000)
+
+Epoch 16
+
+Average Training Error Rate: 11.81% (7084/60000)
+
+Epoch 17
+
+Average Training Error Rate: 11.51% (6908/60000)
+
+Epoch 18
+
+Average Training Error Rate: 11.26% (6756/60000)
+
+Epoch 19
+
+Average Training Error Rate: 11.08% (6650/60000)
+
+Epoch 20
+
+Average Training Error Rate: 10.93% (6560/60000)
+
+Epoch 21
+
+Average Training Error Rate: 10.80% (6480/60000)
+
+Epoch 22
+
+Average Training Error Rate: 10.72% (6434/60000)
+
+Epoch 23
+
+Average Training Error Rate: 10.59% (6351/60000)
+
+Epoch 24
+
+Average Training Error Rate: 10.50% (6302/60000)
+
+Epoch 25
+
+Average Training Error Rate: 10.43% (6258/60000)
+
+Epoch 26
+
+Average Training Error Rate: 10.37% (6219/60000)
+
+Epoch 27
+
+Average Training Error Rate: 10.32% (6192/60000)
+
+Epoch 28
+
+Average Training Error Rate: 10.24% (6147/60000)
+
+Epoch 29
+
+Average Training Error Rate: 10.21% (6125/60000)
+
+Epoch 30
+
+Average Training Error Rate: 10.15% (6090/60000)
+
+Epoch 31
+
+Average Training Error Rate: 10.11% (6064/60000)
+
+Epoch 32
+
+Average Training Error Rate: 10.08% (6046/60000)
+
+Epoch 33
+
+Average Training Error Rate: 10.01% (6007/60000)
+
+Epoch 34
+
+Average Training Error Rate: 9.99% (5993/60000)
+
+Epoch 35
+
+Average Training Error Rate: 9.94% (5961/60000)
+
+Epoch 36
+
+Average Training Error Rate: 9.90% (5938/60000)
+
+Epoch 37
+
+Average Training Error Rate: 9.88% (5925/60000)
+
+Epoch 38
+
+Average Training Error Rate: 9.81% (5886/60000)
+
+Epoch 39
+
+Average Training Error Rate: 9.79% (5875/60000)
+
+Epoch 40
+
+Average Training Error Rate: 9.75% (5850/60000)
+
+Epoch 41
+
+Average Training Error Rate: 9.71% (5824/60000)
+
+Epoch 42
+
+Average Training Error Rate: 9.68% (5810/60000)
+
+Epoch 43
+
+Average Training Error Rate: 9.67% (5801/60000)
+
+Epoch 44
+
+Average Training Error Rate: 9.63% (5778/60000)
+
+Epoch 45
+
+Average Training Error Rate: 9.60% (5760/60000)
+
+Epoch 46
+
+Average Training Error Rate: 9.56% (5736/60000)
+
+Epoch 47
+
+Average Training Error Rate: 9.51% (5707/60000)
+
+Epoch 48
+
+Average Training Error Rate: 9.52% (5710/60000)
+
+Epoch 49
+
+Average Training Error Rate: 9.51% (5703/60000)
+
+Epoch 50
+
+Average Training Error Rate: 9.47% (5683/60000)
+
